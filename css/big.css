@@ -1,0 +1,246 @@
+/* My WEB120 Portal Website Styles */
+
+/* My WEB120 Portal Website Styles */
+
+*{
+    padding:0;
+    margin:0;
+}
+
+html {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 100%;
+    background-color:black;
+}
+
+main.wrapper {
+    background-color:#ccc;
+    overflow:auto;
+}
+
+h1>a {
+    text-decoration: none;
+    color:#000;
+}
+
+.logo {
+    color:red;
+    margin-left:1%;
+    text-shadow:1px 1px #ccc;
+    font-size:1.25em;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container.agenda-view{
+    display: none;
+}
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+	clear:both;
+    background: maroon;
+    color: #fff;
+}
+
+footer a{
+    text-decoration: none;
+    color:skyblue;
+}
+
+img.badge{
+    max-width: 25px;
+}
+
+aside h2, aside h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+aside li{
+    text-align: center;
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+aside li p{
+    margin-bottom: 0;
+}
+
+p{
+    margin: 0 0 1rem 0.25rem  ;
+}
+
+img#example{
+        display:inline-block;
+        float:left;
+    	width: 100%;
+        padding-left: 0.5%;
+        margin-bottom: 1%;
+    }
+
+/*MENU STYLES*/
+#menu{
+    width: 100%;
+    border-collapse: collapse;
+}
+#menu th{
+    text-align: left;
+}
+/*
+#menu td{
+    border-bottom: 1px solid maroon;
+
+}
+*/
+#menu tr:last-of-type td{
+    border-bottom: none;
+}
+
+#menu p{
+    font-style: italic;
+    padding:1rem;
+}
+#menu .price{
+    text-align: right;
+}
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+   main.wrapper {
+		width:80%;
+		margin:auto;
+	}
+
+    section {
+		width:65%;
+		float:left;
+        padding: 0.25%;
+	}
+	
+     aside {	
+		width:34%;
+		float:right;
+        padding: 0.25%;
+    }
+    
+    img.tablet, img.phone {
+       	display:none;
+    	}  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        		background-color: #555;
+        		color:#fff;
+   	 }
+}
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+    
+    main.wrapper {
+		width:100%;
+		margin:auto;
+	}
+	
+	section {
+		width:60%;
+		float:left;
+        padding: 0.25%;
+    }
+	
+	aside {	
+		width:39%;
+		float:right;
+        padding: 0.25%;
+	}  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        background-color: #555;
+        color:#fff;
+    }
+    img.badge{
+    max-width: 25px;
+}
+}
+
+/* PHONE */
+@media all and (max-width:736px) {
+    
+    main.wrapper {
+		width:100%;
+		margin:auto;
+	}
+    
+    img.phone {
+       		width:100%;
+            display:inline-block;
+    }
+    
+    div.embed-container.agenda-view{
+    display: block;
+}
+    
+    div.embed-container.month-view{
+    display: none;
+}
+    
+    
+    #menu{
+        margin: 0;
+    }
+    
+    table, thead, tbody, th, td, tr, caption {
+        display: block;
+    }
+    
+    thead tr{
+        display: none;
+    }
+
+    table tr:nth-of-type(even){
+        background-color: gray;
+    }
+    td{
+        border: none;
+        position: relative;
+        text-align: center;
+    }
+    td:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+    }
+    td:nth-of-type(1):before{
+        content: "Dish"
+    }
+    td:nth-of-type(2):before{
+        content: "Description"
+    }
+    td:nth-of-type(3):before{
+        content: "Price"
+    }
+}
+
